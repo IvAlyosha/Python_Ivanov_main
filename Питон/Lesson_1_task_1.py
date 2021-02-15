@@ -1,4 +1,5 @@
-a = 1
-b = 'Один'
-c = 3.0
-d = True
+string = input('Введите строку')
+integer = int(input('Введите число'))
+float_number = float(input('введите число с плавающей запятой'))
+
+print(string,integer,float_number)
