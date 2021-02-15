@@ -1,12 +1,17 @@
-name = input('Введите свое имя ')
-surname = input('Введите фамилию ')
-age = int(input('Укажите свой возраст '))
-weight = int(input('Укажите свой вес '))
-if (age <= 30) and (weight >= 50 and weight <= 120):
-    print(name, ', вы в хорошем состоянии')
-elif (age > 30 and age < 40) and (weight <= 50 and weight >= 120):
-    print(name, ', вам нужно заняться собой')
-elif (age >= 40) and (weight <= 50 and weight >= 120):
-    print(name, ', вам требуется врачебный осмотр')
-else:
-    print('Вам нужен осмотр')
+print('Медицинская анкета \n ')
+name = input('Введите имя пациента: ')
+age = int(input('Введите возраст пациента: '))
+weight = int(input('Введите вес пациента: '))
+
+if age <= 30:
+    if 50 <= weight <= 120:
+        print(name, ', Возраст - ', age, ', вес - ', weight, '. Пациент в хорошем состоянии и молод!')
+    else:
+        print(name, ', Возраст - ', age, ', вес - ', weight, '. Пациент еще молод и может всё исправить!')
+if age > 30:
+    if age > 40 and (weight < 50 or weight > 120):
+        print(name, ', Возраст - ', age, ', вес - ', weight, '. Пациенту нужен врачебный осмотр!!!')
+    elif 50 <= weight <= 120:
+        print(name, ', Возраст - ', age, ', вес - ', weight, '. Пациент уже не молодой, но в норме.')
+    else:
+        print(name, ', Возраст - ', age, ', вес - ', weight, '. Пациенту следует заняться собой...')
